@@ -81,13 +81,16 @@ ordered according to the <em>custom ranking</em>. Let&#39;s see how to trigger t
 <p>The <code>search</code> method of the helper triggers the search with the current parameters
 saved in the helper. For the moment we have none, therefore the results contains
 the first records ordered by the <em>custom ranking</em>.</p>
-<p>See this step <a href="http://jsfiddle.net/gh/gist/jquery/2.2.4/0a8e77b2fd0694046e986e0138feb697/">live on jsFiddle</a>.</p>
+<p><a href=="http://codepen.io/Algolia/share/zip/AXbmEX/">Download this example.</a><p data-height="300" style="300px" data-theme-id="light" data-slug-hash="AXbmEX" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<div class='chapter-summary'>
 <p>You now know:</p>
 <ul>
-<li>how to instantiate the helper</li>
-<li>listen to the <code>result</code> event and read the results from Algolia</li>
-<li>trigger a search to algolia</li>
+<li>how to <strong>instantiate</strong> the helper</li>
+<li><strong>listen</strong> to the <code>result</code> event and <strong>read the results</strong> from Algolia</li>
+<li><strong>trigger a search</strong> to algolia</li>
 </ul>
+</div>
+
 <h2 id="setting-the-query">Setting the query</h2>
 <p>The empty search is a great tool to display the first step of a search but it
 is not what our users are looking for. They want to search in your data. Let&#39;s
@@ -122,8 +125,8 @@ and trigger a new search.</p>
 But this does not trigger the search, we need to trigger it manually, that&#39;s
 why we call <code>search</code> afterwards.</p>
 <p>To help our users better understand the results, let&#39;s use the highlighted
-results returned by Algolia. This way the users can easily focus on what changed
-with the input of new characters.</p>
+results returned by Algolia. This way the users can easily understand why the
+results match their query.</p>
 <pre><code class="hljs javascript">helper.on(<span class="hljs-string">'result'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">content</span>) </span>{
   renderHits(content);
 });
@@ -138,20 +141,23 @@ with the input of new characters.</p>
 
 <p>The object <code>_highlightResult</code> contains the all the attributes that may be highlighted
 (by default, all the searchable attributes).</p>
-<p>See this part <a href="http://jsfiddle.net/gh/gist/jquery/2.2.4/80e20fcda7f3894ade08eb2c3759516b/">live in action on JSFiddle</a>.</p>
+<p><a href=="http://codepen.io/Algolia/share/zip/VjAVjX/">Download this example.</a><p data-height="300" style="300px" data-theme-id="light" data-slug-hash="VjAVjX" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<div class='chapter-summary'>
 <p>In this part, we have seen:</p>
 <ul>
-<li>how to set the query of the search</li>
-<li>how to trigger the search</li>
-<li>how to display highlighting to help our users</li>
+<li>how to <strong>set the query</strong> of the search</li>
+<li>how to <strong>trigger the search</strong></li>
+<li>how to <strong>display highlighting</strong> to help our users</li>
 <li>how to plug all these to make an interactive search</li>
 </ul>
+</div>
+
 <h2 id="adding-facets">Adding facets</h2>
 <p>A facet is a filter that can be used to restrict the results to specific values
 of an attribute. For example, in our records we have an attribute <code>type</code>, with
 a facet we can restrict the results to only <code>movie</code>. This way the results returned
 by Algolia will only be those for which the attribute <code>type</code> has <code>movie</code> as a value.</p>
-<p>If you&#39;re using you&#39;re own data in this tutorial, you must add the attributes you
+<p>If you&#39;re using your own data in this tutorial, you must add the attributes you
 want to facet in the <a href="https://www.algolia.com/explorer#?tab=display">display configuration of your index</a>.</p>
 <p>First we should declare that we want to use the attribute <code>type</code> as a facet. This is done
 during the initialization of the helper.</p>
@@ -161,7 +167,7 @@ during the initialization of the helper.</p>
 
 <p>The list of available facets is returned by the Algolia API. This list is dynamic
 and should be updated at each new results. So that&#39;s why we render this list each
-time we receive new results. This list also let our user select a value, so we should
+time we receive new results. This list also lets our user select a value, so we should
 also make it so that it&#39;s possible using jQuery.</p>
 <pre><code class="hljs javascript">$(<span class="hljs-string">'#facet-list'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
   <span class="hljs-keyword">var</span> facetValue = $(e.target).data(<span class="hljs-string">'facet'</span>);  
@@ -199,7 +205,7 @@ an attribute. The object returned by this method contains three properties: </p>
 
 <p>We now have a menu displaying the values that the user can choose from
 to filter the list of results. Those values are generated by Algolia
-based on the rest of the search, meaning that it won&#39;t provide facet
+based on the rest of the search, meaning that it will only provide facet
 values that are meaningful for the current other parameters. Try typing
 <em>apple</em> and the filter item <em>movie</em> will be removed.</p>
 <p>This kind of facets are called <em>conjunctive facets</em> but they are not the only
@@ -210,13 +216,16 @@ kind of filtering that you can apply with the helper. You can also do:</p>
 <li>numerical filtering</li>
 <li>tag filtering</li>
 </ul>
-<p>See this sample <a href="http://jsfiddle.net/gh/gist/jquery/2.2.4/76884d7261e6cc06d0d23b1bd0a11c96/">live on jsFiddle</a>.</p>
+<p><a href=="http://codepen.io/Algolia/share/zip/ZOamyB/">Download this example.</a><p data-height="300" style="300px" data-theme-id="light" data-slug-hash="ZOamyB" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<div class='chapter-summary'>
 <p>In this part, we have seen:</p>
 <ul>
-<li>how to declare a facet in the configuration of the helper</li>
-<li>how to display the facet values computed by the API</li>
-<li>how to refine a facet</li>
+<li>how to <strong>declare a facet</strong> in the configuration of the helper</li>
+<li>how to <strong>display the facet values</strong> computed by the API</li>
+<li>how to <strong>refine a facet</strong></li>
 </ul>
+</div>
+
 <h2 id="going-further">Going further</h2>
 <p>Congratulations! You now know the basics of the Helper. You should,
 by now, have a better overview of the kind of features available in the
