@@ -8,11 +8,12 @@ nav.sidebar {
   padding-top: 120px;
   overflow: auto;
 
-  &.fixed {
+  & ul.fixed {
     position: fixed;
     top: $navigation-height;
     z-index: 9;
     padding-top: 0;
+    max-width: $sidebar-width;
   }
 
 
@@ -32,6 +33,8 @@ nav.sidebar {
       &.level-h3 {
         line-height: 24px;
         font-size: 12px;
+        padding-left: 12px;
+        font-family: "Open sans";
       }
 
       a {
