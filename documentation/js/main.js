@@ -71,10 +71,12 @@
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-	function sidebar(_ref) {
-	  var headersContainer = _ref.headersContainer;
-	  var sidebarContainer = _ref.sidebarContainer;
-	  var headerStartLevel = _ref.headerStartLevel;
+	function sidebar(options) {
+	  var headersContainer = options.headersContainer;
+	  var sidebarContainer = options.sidebarContainer;
+	  var headerStartLevel = options.headerStartLevel;
+
+	  listenToChanges(options);
 
 	  var headers = headersContainer.querySelectorAll('h2, h3');
 	  //const select = document.createElement('select');
@@ -87,9 +89,15 @@
 	  //select.addEventListener('change', e => window.location = e.target.value);
 	  sidebarContainer.appendChild(list);
 	  //sidebarContainer.appendChild(select);
-	  sidebarFollowScroll(sidebarContainer);
+	  sidebarFollowScroll(sidebarContainer.firstChild);
 	  activeLinks(sidebarContainer);
 	  scrollSpy(sidebarContainer, headersContainer);
+	}
+
+	function listenToChanges(originalParameters) {
+	  var headersContainer = originalParameters.headersContainer;
+	  var sidebarContainer = originalParameters.sidebarContainer;
+	  var headerStartLevel = originalParameters.headerStartLevel;
 	}
 
 	function sidebarFollowScroll(sidebarContainer) {
@@ -138,8 +146,8 @@
 	  var findActiveSidebarLink = function findActiveSidebarLink() {
 	    var highestVisibleHeaders = headers.map(function (header) {
 	      return { element: header, rect: header.getBoundingClientRect() };
-	    }).filter(function (_ref2) {
-	      var rect = _ref2.rect;
+	    }).filter(function (_ref) {
+	      var rect = _ref.rect;
 
 	      // top element relative viewport position should be at least 1/3 viewport
 	      // and element should be in viewport
@@ -181,7 +189,7 @@
 	}
 
 	function getPositionsKeyElements(sidebar) {
-	  var sidebarBBox = sidebar.firstChild.getBoundingClientRect();
+	  var sidebarBBox = sidebar.getBoundingClientRect();
 	  var bodyBBox = document.body.getBoundingClientRect();
 	  var sidebarTop = sidebarBBox.top - bodyBBox.top;
 	  var footer = document.querySelector('.ac-footer');

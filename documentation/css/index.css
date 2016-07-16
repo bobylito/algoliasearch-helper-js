@@ -380,14 +380,14 @@ textarea {
   animation-fill-mode: both; }
 
 nav.sidebar ul li a:focus, nav.sidebar ul li a:target, nav.sidebar ul li a.active {
-  color: #47EBC1;
-  box-shadow: inset -2px 0 0 0 #47EBC1; }
+  color: #fb366e;
+  box-shadow: inset -2px 0 0 0 #fb366e; }
   @media (max-width: 960px) {
     nav.sidebar ul li a:focus, nav.sidebar ul li a:target, nav.sidebar ul li a.active {
       font-weight: bold;
       box-shadow: none;
       color: #fff;
-      border-bottom: 2px solid #47EBC1; } }
+      border-bottom: 2px solid #fb366e; } }
 
 * {
   box-sizing: border-box; }
@@ -464,7 +464,7 @@ hr {
 .pipe {
   width: 2px;
   height: 20px;
-  background: #47EBC1;
+  background: #fb366e;
   display: inline-block;
   float: left;
   margin: 20px 16px 0;
@@ -719,7 +719,7 @@ ellipse {
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-item.active a,
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-icon.active a {
         padding-bottom: 15px;
-        border-bottom: 2px solid #47EBC1; }
+        border-bottom: 2px solid #fb366e; }
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-item .ac-icon,
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-icon .ac-icon {
         height: 50px; }
@@ -812,7 +812,7 @@ ellipse {
         display: none; } }
   .ac-footer .ac-footer-link-item {
     font-size: 12px;
-    color: #47EBC1;
+    color: #fb366e;
     font-weight: 400;
     margin-left: 16px;
     text-decoration: none; }
@@ -1398,7 +1398,7 @@ section {
     section {
       padding: 0 16px; } }
   section.hero-section {
-    background: #484748;
+    background: #FDBD57;
     color: #fff;
     padding-top: 75px; }
     section.hero-section .container {
@@ -1433,7 +1433,7 @@ section {
       margin-top: 32px; }
     section.hero-section h3 {
       font-size: 20px;
-      color: #f2f4f6;
+      color: #fef5e6;
       font-weight: 400;
       padding: 8px 0; }
     @media (max-width: 960px) {
@@ -1685,7 +1685,7 @@ section {
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-item.active a,
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-icon.active a {
         padding-bottom: 15px;
-        border-bottom: 2px solid #47EBC1; }
+        border-bottom: 2px solid #fb366e; }
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-item .ac-icon,
       .ac-nav .ac-nav-menu-list .ac-nav-menu-list-icon .ac-icon {
         height: 50px; }
@@ -1723,9 +1723,9 @@ section {
       background: url("../images/icon-github.svg") no-repeat center center/contain; }
 
 .btn {
-  background: #19e6b3;
+  background: #e7486b;
   color: #fff;
-  border: 1px solid #47EBC1;
+  border: 1px solid #fb366e;
   height: 40px;
   max-width: 140px;
   line-height: 40px;
@@ -1741,7 +1741,7 @@ section {
   transition: background 0.1s ease;
   cursor: pointer; }
   .btn:hover, .btn:active {
-    background: #47EBC1; }
+    background: #fb366e; }
   .btn.btn-cta {
     max-width: 230px;
     margin: 32px auto; }
@@ -1769,10 +1769,10 @@ section {
         .btn-ghost-grey:hover .ico-triangle {
           border-left-color: #fff; }
     .btn-ghost-pink {
-      color: #47EBC1; }
+      color: #fb366e; }
       .btn-ghost-pink:hover {
-        background: #47EBC1;
-        border-color: #47EBC1;
+        background: #fb366e;
+        border-color: #fb366e;
         color: #fff; }
 
 .media-object {
@@ -1900,7 +1900,7 @@ h2.title {
     position: absolute;
     width: 50px;
     height: 3px;
-    background: #47EBC1;
+    background: #fb366e;
     top: 2.8em;
     left: 0;
     right: 0;
@@ -1938,7 +1938,7 @@ h4 {
 .link {
   text-transform: uppercase;
   font-size: 16px;
-  color: #47EBC1;
+  color: #fb366e;
   font-weight: 600;
   text-decoration: none;
   padding: 0 8px; }
@@ -1952,11 +1952,12 @@ nav.sidebar {
   border-right: 1px solid #d8d8d8;
   padding-top: 120px;
   overflow: auto; }
-  nav.sidebar.fixed {
+  nav.sidebar ul.fixed {
     position: fixed;
     top: 50px;
     z-index: 9;
-    padding-top: 0; }
+    padding-top: 0;
+    max-width: 180px; }
   nav.sidebar ul {
     list-style: none;
     width: 100%;
@@ -1968,7 +1969,9 @@ nav.sidebar {
       line-height: 32px; }
       nav.sidebar ul li.level-h3 {
         line-height: 24px;
-        font-size: 12px; }
+        font-size: 12px;
+        padding-left: 12px;
+        font-family: "Open sans"; }
       nav.sidebar ul li a {
         text-decoration: none;
         display: block;
@@ -2037,11 +2040,11 @@ nav.sidebar {
     font-size: 28px;
     padding-right: 1em;
     border-bottom: 1px solid #d8d8d8;
-    margin-top: 3em; }
+    margin-top: 32px; }
     .documentation-section h2:first-of-type {
       margin-top: 0; }
   .documentation-section h3 {
-    margin-top: 1em; }
+    margin-top: 32px; }
   .documentation-section .api-entry {
     margin: 2em 0; }
     .documentation-section .api-entry code {
@@ -2066,7 +2069,7 @@ nav.sidebar {
   .documentation-section .css-class {
     white-space: nowrap; }
   .documentation-section .chapter-summary {
-    background: #f7fcf8;
+    background: #fef5e6;
     padding: 10px;
     border-radius: 4px; }
   .documentation-section .documentation-container {
@@ -2161,10 +2164,10 @@ nav.sidebar {
       visibility: hidden; }
     .documentation-section .documentation-container .algolia-places {
       color: #000000; }
-    .documentation-section .documentation-container h2, .documentation-section .documentation-container h3 {
+    .documentation-section .documentation-container h2 {
       padding-bottom: 8px; }
     .documentation-section .documentation-container h2 .anchor, .documentation-section .documentation-container h3 .anchor, .documentation-section .documentation-container .api-entry .anchor {
-      color: #47EBC1;
+      color: #fb366e;
       text-decoration: none; }
     .documentation-section .documentation-container h2:hover .anchor, .documentation-section .documentation-container h3:hover .anchor, .documentation-section .documentation-container .api-entry:hover .anchor {
       visibility: visible; }
@@ -2213,7 +2216,7 @@ nav.sidebar {
     text-decoration: none;
     color: black; }
     .method .api-entry:hover, .property .api-entry:hover, .typedef .api-entry:hover, .event .api-entry:hover {
-      color: #47EBC1; }
+      color: #fb366e; }
     .method .api-entry:focus, .property .api-entry:focus, .typedef .api-entry:focus, .event .api-entry:focus {
       outline: none; }
   .method .summary, .property .summary, .typedef .summary, .event .summary {
@@ -2475,7 +2478,7 @@ nav.sidebar {
         display: none; } }
   .ac-footer .ac-footer-link-item {
     font-size: 12px;
-    color: #47EBC1;
+    color: #fb366e;
     font-weight: 400;
     margin-left: 16px;
     text-decoration: none; }

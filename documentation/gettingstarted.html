@@ -42,10 +42,9 @@ the elements you need for the rest of the tutorial:</p>
 if you prefer. Otherwise, let&#39;s proceed with the setup of the library
 in the application.</p>
 <h2 id="integrate">Integrate</h2>
-<p>The helper is available on different platforms. You can use it as a script, via bower or NPM.</p>
-<p>Because the helper extends the client, it also needs to be included in your project.</p>
+<p>The helper is available on different platforms. You can use it as a script, via bower or NPM. As the helper extends the client, therefore it also needs to be included in your project.</p>
 <h3 id="script-tag">Script tag</h3>
-<p>Include the following line in the header of your project:</p>
+<p>The following script tag will import both the client and the Helper with a single request to the CDN.</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>`</code></pre>
 
 <h3 id="bower">Bower</h3>
@@ -81,7 +80,7 @@ ordered according to the <em>custom ranking</em>. Let&#39;s see how to trigger t
 <p>The <code>search</code> method of the helper triggers the search with the current parameters
 saved in the helper. For the moment we have none, therefore the results contains
 the first records ordered by the <em>custom ranking</em>.</p>
-<p><a href=="http://codepen.io/Algolia/share/zip/AXbmEX/">Download this example.</a><p data-height="300" style="300px" data-theme-id="light" data-slug-hash="AXbmEX" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<p><a href=="http://codepen.io/Algolia/share/zip/AXbmEX/">Download this example.</a><p data-height="300" style="height:300px" data-theme-id="light" data-slug-hash="AXbmEX" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
 <div class='chapter-summary'>
 <p>You now know:</p>
 <ul>
@@ -141,7 +140,7 @@ results match their query.</p>
 
 <p>The object <code>_highlightResult</code> contains the all the attributes that may be highlighted
 (by default, all the searchable attributes).</p>
-<p><a href=="http://codepen.io/Algolia/share/zip/VjAVjX/">Download this example.</a><p data-height="300" style="300px" data-theme-id="light" data-slug-hash="VjAVjX" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<p><a href=="http://codepen.io/Algolia/share/zip/VjAVjX/">Download this example.</a><p data-height="300" style="height:300px" data-theme-id="light" data-slug-hash="VjAVjX" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
 <div class='chapter-summary'>
 <p>In this part, we have seen:</p>
 <ul>
@@ -216,7 +215,7 @@ kind of filtering that you can apply with the helper. You can also do:</p>
 <li>numerical filtering</li>
 <li>tag filtering</li>
 </ul>
-<p><a href=="http://codepen.io/Algolia/share/zip/ZOamyB/">Download this example.</a><p data-height="300" style="300px" data-theme-id="light" data-slug-hash="ZOamyB" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<p><a href=="http://codepen.io/Algolia/share/zip/ZOamyB/">Download this example.</a><p data-height="300" style="height:300px" data-theme-id="light" data-slug-hash="ZOamyB" data-default-tab="result" data-user="Algolia" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Algolia/pen/JKyQxx/">Results with highlighting and no results message.</a> by Algolia (<a href="http://codepen.io/Algolia">@Algolia</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
 <div class='chapter-summary'>
 <p>In this part, we have seen:</p>
 <ul>
